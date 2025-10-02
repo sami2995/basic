@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: main   # or master depending on your repo
+publish_mode: editorial_workflow
+site_url: https://basicsimpleportfolio.netlify.app/
 
 media_folder: "images/uploads"  # where media like images will go
 public_folder: "/images/uploads"
