@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  branch: main   # or master depending on your repo
+
+media_folder: "images/uploads"  # where media like images will go
+public_folder: "/images/uploads"
+
+collections:
+  - name: "about"
+    label: "About Section"
+    files:
+      - file: "content/about.json"
+        label: "About Me"
+        name: "about"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "text" }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+
+  - name: "skills"
+    label: "Skills"
+    folder: "content/skills"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Skill Name", name: "name", widget: "string" }
