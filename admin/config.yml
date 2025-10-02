@@ -1,22 +1,21 @@
 backend:
   name: git-gateway
-  branch: main   # or master depending on your repo
+  branch: main
 publish_mode: editorial_workflow
-site_url: https://basicsimpleportfolio.netlify.app/
 
-media_folder: "images/uploads"  # where media like images will go
+media_folder: "static/images/uploads"  # better convention
 public_folder: "/images/uploads"
 
 collections:
   - name: "about"
     label: "About Section"
     files:
-      - file: "content/about.json"
+      - file: "content/about.md"
         label: "About Me"
         name: "about"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "projects"
     label: "Projects"
